@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+  <qresource>
+    <file>Icons/HBVDSciVisP.png</file>
+	<file>Icons/ZibLogo.png</file>
+	<file>Icons/VirtualDissectionIcon.png</file>
+	<file>Icons/LSRIcon.png</file>
+  </qresource>
+</RCC>

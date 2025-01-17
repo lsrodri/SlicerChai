@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>qSlicerHBVDSciVisPModuleWidget</class>
+ <widget class="qSlicerWidget" name="qSlicerHBVDSciVisPModuleWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1063</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>HBVDSciVisP</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton" native="true">
+     <property name="text" stdset="0">
+      <string>Display</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="qSlicerHBVDSciVisPFooBarWidget" name="FooBar" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnStartHapticLoopCycle">
+           <property name="minimumSize">
+            <size>
+             <width>511</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Start Haptic Loop Cycle</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnStopHapticLoopCycle">
+           <property name="minimumSize">
+            <size>
+             <width>501</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Stop Haptic Loop Cycle</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnForcesOnOff">
+     <property name="text">
+      <string>Switch Forces On</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnTestVTKPrimitiveSurface">
+     <property name="text">
+      <string>Surface Forces On</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblGoalPosition">
+     <property name="text">
+      <string>GoalPosition</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblCellId">
+     <property name="text">
+      <string>CellId</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblVTKPrimitiveClosestPosition">
+     <property name="text">
+      <string>VTK Primitive Closest Position</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblDisplayHapticPosition">
+     <property name="text">
+      <string>Display Haptic Position</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblDisplayHapticPosAndScalarVal">
+     <property name="text">
+      <string>Haptic Position and Value</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblRates">
+     <property name="text">
+      <string>Frequency</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_7">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="vLayoutDataSelect">
+     <item>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QPushButton" name="btnInitializeHaptics">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Initialize Haptics</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnGetNodeData">
+           <property name="text">
+            <string>Get Node Data</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnTestHapticDeviceMovement">
+     <property name="text">
+      <string>Test Haptic Device Movement Off</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_9">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_8">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btnLeftMoveHaptic">
+         <property name="text">
+          <string>Left Move Haptic</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QPushButton" name="btnUpMoveHaptic">
+             <property name="text">
+              <string>Up Move Haptic</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnDownMoveHaptic">
+             <property name="text">
+              <string>Down Move Haptic</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <spacer name="verticalSpacer_12">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnInMoveHaptic">
+           <property name="text">
+            <string>In Move Haptic</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_11">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnOutMoveHaptic">
+           <property name="text">
+            <string>out Move Haptic</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_13">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRightMoveHaptic">
+         <property name="text">
+          <string>Right Move Haptic</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>qSlicerWidget</class>
+   <extends>QWidget</extends>
+   <header>qSlicerWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ctkCollapsibleButton</class>
+   <extends>QWidget</extends>
+   <header>ctkCollapsibleButton.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>qSlicerHBVDSciVisPFooBarWidget</class>
+   <extends>QWidget</extends>
+   <header>qSlicerHBVDSciVisPFooBarWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btnStartHapticLoopCycle</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnStartHapticLoopCycle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStopHapticLoopCycle</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnStopHapticLoopCycle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnGetNodeData</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onGetNodeData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnInitializeHaptics</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onInitializeHaptics()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>262</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLeftMoveHaptic</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnLeftMoveHaptic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>961</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnRightMoveHaptic</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnRightMoveHaptic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>912</x>
+     <y>961</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnUpMoveHaptic</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnUpMoveHaptic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>879</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDownMoveHaptic</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnDownMoveHaptic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>1044</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnInMoveHaptic</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnInMoveHaptic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>654</x>
+     <y>924</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOutMoveHaptic</sender>
+   <signal>clicked()</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnOutMoveHaptic()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>654</x>
+     <y>999</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>524</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnForcesOnOff</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnForcesOnOffClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>527</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnTestHapticDeviceMovement</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnTestHapticDeviceMovementClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>527</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnTestVTKPrimitiveSurface</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>qSlicerHBVDSciVisPModuleWidget</receiver>
+   <slot>onbtnTestVTKPrimitiveSurfaceClicked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>531</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
