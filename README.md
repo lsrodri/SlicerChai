@@ -1,4 +1,6 @@
-# SlicerHBVDinSciVisProd
+# SlicerChai
+
+This repository is still under development, and its initial code stems from the master's thesis "Haptization of Biomedical Volumetric Datasets in Scientific Visualization", authored by Darshain Desai and supervised by Lucas Siqueira Rodrigues at ZIB / Matters of Activity. 
 
 # CMAKE -- Note
 1. Ensure that you set the "CHAI3D_DIR" path.  This will be the path to your CHAI3D folder.  It should also contain the project file (CHAI3D-VS2015.vcxproj).
