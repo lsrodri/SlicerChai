@@ -2,9 +2,10 @@
 
 This repository is still under development, and its initial code stems from the master's thesis "Haptization of Biomedical Volumetric Datasets in Scientific Visualization", authored by Darshain Desai and supervised by Lucas Siqueira Rodrigues at ZIB / Matters of Activity. 
 
+This extension integrates Chai3D into 3DSlicer as a loadable module extension and provides a device-agnostic integration of haptics into 3D scenes. Haptic cursors are represented into 3D scenes, but voxel-based haptics are still under development. Limited interaction has been added.
+
 # CMAKE -- Note
 1. Ensure that you set the "CHAI3D_DIR" path.  This will be the path to your CHAI3D folder.  It should also contain the project file (CHAI3D-VS2015.vcxproj).
-
 
 # chai3d -- Note
 
