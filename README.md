@@ -1,65 +1,17 @@
 # SlicerChai
 
-This repository is still under development, and its initial code stems from the master's thesis "Haptization of Biomedical Volumetric Datasets in Scientific Visualization", authored by Darshain Desai and supervised by Lucas Siqueira Rodrigues at ZIB / Matters of Activity. 
+**This repository is still under development.**
+
+This repository extends the initial code stemming from "Haptization of Biomedical Volumetric Datasets in Scientific Visualization", a master's thesis authored by Darshain Desai and supervised by Lucas Siqueira Rodrigues at ZIB / Matters of Activity. 
 
 This extension integrates Chai3D into 3DSlicer as a loadable module extension and provides a device-agnostic integration of haptics into 3D scenes. Haptic cursors are represented into 3D scenes, but voxel-based haptics are still under development. Limited interaction has been added.
 
-# CMAKE -- Note
-1. Ensure that you set the "CHAI3D_DIR" path.  This will be the path to your CHAI3D folder.  It should also contain the project file (CHAI3D-VS2015.vcxproj).
+# Chai3D -- Note
+We have created a compatible version of Chai3D 3.2.0 at https://github.com/lsrodri/chai3d-lite-slicer. Your local clone of this repository should be used in your CMake build. 
 
-# chai3d -- Note
-
-Go to C:\<>\chai3d-3.2.0\external\Eigen\Eigen\src\Core\Functors.h   \
-Line 973 to line 979 \
-Comment or remove below : \
-//template<typename T> \
-//struct functor_traits<std::binder2nd<T> > \
-//{ enum { Cost = functor_traits<T>::Cost, PacketAccess = false }; }; \
-
-//template<typename T> \
-//struct functor_traits<std::binder1st<T> > \
-//{ enum { Cost = functor_traits<T>::Cost, PacketAccess = false }; }; \
-
-
-
-**The below may not be required now, but is retained in case any modifcation is required.** 
-
-
-
-Go to C:\<>\chai3d\src\system\CThread.h   \
-Around Line 134 add below: \
-void start(void(*a_function)(cVector3d*), const CThreadPriority a_level, cVector3d* a_arg);
-  
-Go to C:\<>\chai3d\src\system\CThread.cpp   \
-Around Line 178 add below: \
-void cThread::start(void(*a_function)(cVector3d*), CThreadPriority a_level, cVector3d* a_arg)  \
-{  \
-    // create thread  \
-#if defined(WIN32) | defined(WIN64)  \
-    CreateThread( \ 
-        0,  \  
-        0,  \
-        (LPTHREAD_START_ROUTINE)(a_function),  \
-        a_arg,  \
-        0,  \
-        &m_threadId \
-    );  \
-#endif  \
-  \
-#if defined (LINUX) || defined (MACOSX)  \
-    pthread_create(  \
-        &m_handle,  \
-        0,  \
-        (void* (*)(void*)) a_function,  \
-        a_arg  \
-    );  \
-#endif  \
- \
-    // set thread priority level  \
-    setPriority(a_level);  \
-}   \
- 
-
+# CMake -- Note
+1. Set "CHAI3D_DIR" to your local directory. CMake will extract dependencies from CHAI3D-VS2015.vcxproj.
+2. Set "Slicer_DIR" to your local Slicer-build directory. 
 
 # Debugging -- Note
   
