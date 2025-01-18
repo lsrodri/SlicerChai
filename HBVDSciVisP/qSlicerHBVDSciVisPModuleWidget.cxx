@@ -280,7 +280,7 @@ namespace
 	cVector3d desiredPosition; // Making this also global as unable to pass argument to thread method
 	cVector3d oSurfaceClosestPosition;// For setting VTK surfaces closest position
 
-	const char* cptrFileName = "example.nrrd";
+	const char* cptrFileName = "HBVDSciVisP/Resources/example.nrrd";
 
 	bool hdbutton0, hdbutton1, hdbutton2, hdbutton3;
 
@@ -1117,7 +1117,7 @@ public:
 			// Formatting the position of the fiducial point as a string
 			std::string fiducialPosition = std::to_string(dHD_XYZ3[0]) + "," + std::to_string(dHD_XYZ3[1]) + "," + std::to_string(dHD_XYZ3[2]);
 
-			std::string filename = "trials.csv";
+			std::string filename = "HBVDSciVisP/Resources/trials.csv";
 			CSVData csvData = loadCSV(filename);
 
 			std::unordered_map<std::string, std::string> record = retrieveRecord(csvData, uiParticipant, uiTrial);
@@ -1558,8 +1558,8 @@ void qSlicerHBVDSciVisPModuleWidget::setMRMLScene(vtkMRMLScene* varMRMLScene)
 #else
 		surface->SetInputData(imageDataPoly);
 #endif
-		if (std::strcmp(cptrFileName, "example.nrrd") == 0) {
-			surface->SetValue(0, 0.999); //example.nrrd : 35 -- for flying edges
+		if (std::strcmp(cptrFileName, "HBVDSciVisP/Resources/example.nrrd") == 0) {
+			surface->SetValue(0, 0.999); //HBVDSciVisP/Resources/example.nrrd : 35 -- for flying edges
 		}
 		else {
 			surface->SetValue(0, 0.1);
@@ -1677,7 +1677,7 @@ void qSlicerHBVDSciVisPModuleWidget::setMRMLScene(vtkMRMLScene* varMRMLScene)
 
 
 
-		if (std::strcmp(cptrFileName, "example.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
+		if (std::strcmp(cptrFileName, "HBVDSciVisP/Resources/example.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
 		{
 			actorFlyingEdge->GetProperty()->SetOpacity(0.0001);
 		}
@@ -2207,7 +2207,7 @@ vtkMRMLScalarVolumeNode* qSlicerHBVDSciVisPModuleWidget::loadVolume(const char* 
 		ptrVtkPiecewiseFuOpacities->AddPoint(374.12, 0.09);
 		ptrVtkPiecewiseFuOpacities->AddPoint(659.53, 0.53);
 	}
-	else if (std::strcmp(cptrFileName, "example.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
+	else if (std::strcmp(cptrFileName, "HBVDSciVisP/Resources/example.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
 	{
 		//For Cone and Sphere or Cone
 		ptrVtkPiecewiseFuOpacities->AddPoint(0.0, 0.0);
