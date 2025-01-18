@@ -280,64 +280,7 @@ namespace
 	cVector3d desiredPosition; // Making this also global as unable to pass argument to thread method
 	cVector3d oSurfaceClosestPosition;// For setting VTK surfaces closest position
 
-	//const char* cptrFileName = "MR-head.nrrd";
-	//const char* cptrFileName = "DRDTriScaleVol4.nrrd";
-	//const char* cptrFileName = "drdModAxialCone_2.nrrd";
-	const char* cptrFileName = "drdModAxialCone_2_mod.nrrd";
-	//const char* cptrFileName = "drdModAxialCone_3.nrrd";
-	//const char* cptrFileName = "cone_and_sphere.nrrd";
-	//const char* cptrFileName = "MR-head_RAS.nrrd";// Top above adjacent front right - right ear right --nose back-- neck top -- no actor rotation
-	//const char* cptrFileName = "MR-head_RPS.nrrd";// Top above adjacent right - left ear right --nose towards user-- neck top -- no actor rotation
-	//const char* cptrFileName = "MR-head_LAI.nrrd";// Adjacent front - left ear right --nose back direction-- head towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_RAI.nrrd";// Adjacent right front - left ear right --nose back direction-- head towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_LPI.nrrd";// Merge exact -- no actor rotation  **** Test haptic
-	//const char* cptrFileName = "MR-head_LPI_mod.nrrd";// Merge exact -- no actor rotation  **** Test haptic -- Visual Alignment of data , modified data
-	//const char* cptrFileName = "MR-head_RPI.nrrd";// Adjacent exact right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SLA.nrrd";// Top above front - right ear to user --nose down direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SRA.nrrd";// Top right front - right ear to user --nose down direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_ILA.nrrd";// Adjacent front - left ear to user --nose down direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_IRA.nrrd";// Adjacent front right - left ear to user --nose down direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SLP.nrrd";// Top above back - left ear to user --nose top direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SRP.nrrd";// Top right back - left ear to user --nose top direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_ILP.nrrd";// Merged back - right ear to user --nose top direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_IRP.nrrd";// Adjacent right back - right ear to user --nose top direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_LSA.nrrd";// Top front above - left ear right --nose down direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_RSA.nrrd";// Top front right - left ear right --nose down direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_LIA.nrrd";// Front - right ear right --nose down direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_RIA.nrrd";// Front right - right ear right --nose down direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_LSP.nrrd";// Top above - right ear right --nose top direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_RSP.nrrd";// Top above right - right ear right --nose top direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_LIP.nrrd";// Merged - left ear right --nose top direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_RIP.nrrd";// Adjacent touching right - left ear right --nose top direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_LAS.nrrd";// Top above front - right ear right --nose back direction-- head towards bottom -- no actor rotation
-	//const char* cptrFileName = "MR-head_PRI.nrrd";// Adjacent right - left ear to user --nose right direction-- head towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_PLI.nrrd"; // Merged back - left ear to user --nose right direction-- head towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_ARI.nrrd";//Front right - right ear to user --nose left direction-- head towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_ALI.nrrd";// Adjacent forward - right ear to user --nose left direction-- head towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_PRS.nrrd";// Top above right - right ear to user --nose right direction-- head towards bottom -- no actor rotation
-	//const char* cptrFileName = "MR-head_PLS.nrrd";// Top above - right ear to user --nose right direction-- head towards bottom -- no actor rotation
-	//const char* cptrFileName = "MR-head_ALS.nrrd";// Top forward - left ear to user --nose left direction-- neck towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_ARS.nrrd";// Top right forward - left ear to user --nose left direction-- neck towards top -- no actor rotation
-	//const char* cptrFileName = "MR-head_IPR.nrrd";// Adjacent right - right ear down --nose user direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SAR.nrrd";// Top right forward - right ear down --nose back direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SPR.nrrd";// Top right - left ear down --nose user direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_IPL.nrrd";// Merged  - right ear down --nose user direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SPL.nrrd";// Adjacent top - left ear down --nose user direction-- head towards left -- no actor rotation
-	//const char* cptrFileName = "MR-head_IAL.nrrd";// Adjacent front - left ear down --nose back direction-- head towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_SAL.nrrd";// Top front - right ear down --nose back direction-- neck towards right -- no actor rotation
-	//const char* cptrFileName = "MR-head_PIR.nrrd";// Adjacent right - left ear down --nose right direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_PSR.nrrd";// Top right - right ear down --nose right direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_AIR.nrrd"; // Adjacent right - right ear down --nose left direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_ASR.nrrd"; // Top right - left ear down --nose left direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_PIL.nrrd"; // Merged  - left ear down --nose right direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_PSL.nrrd"; // Top  - right ear down --nose right direction-- neck towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_AIL.nrrd"; // Front - right ear down --nose left direction-- head towards user -- no actor rotation
-	//const char* cptrFileName = "MR-head_ASL.nrrd";// Top right - left ear down --nose left direction-- no actor rotation
-	//const char* cptrFileName = "MR-head_Sagittal.nrrd"; // Top right - left ear down --nose left direction-- no actor rotation
-	//const char* cptrFileName = "MR-head_Coronal.nrrd"; // Top right - left ear down --nose left direction-- no actor rotation
-	//const char* cptrFileName = "MR-head_Axial.nrrd"; //Mirror image right -- no actor rotation
-
-
+	const char* cptrFileName = "example.nrrd";
 
 	bool hdbutton0, hdbutton1, hdbutton2, hdbutton3;
 
@@ -1615,12 +1558,8 @@ void qSlicerHBVDSciVisPModuleWidget::setMRMLScene(vtkMRMLScene* varMRMLScene)
 #else
 		surface->SetInputData(imageDataPoly);
 #endif
-		if (std::strcmp(cptrFileName, "MR-head_LPI_mod.nrrd") == 0)
-		{
-			surface->SetValue(0, 35);//MR-head_LPI_mod.nrrd : 35 -- for flying edges// For Mr Head changing Threshold to 30 - 110. Initiall it was 0.99 for cube
-		}
-		else if (std::strcmp(cptrFileName, "drdModAxialCone_2.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0) {
-			surface->SetValue(0, 0.999);//drdModAxialCone_2.nrrd : 35 -- for flying edges
+		if (std::strcmp(cptrFileName, "example.nrrd") == 0) {
+			surface->SetValue(0, 0.999); //example.nrrd : 35 -- for flying edges
 		}
 		else {
 			surface->SetValue(0, 0.1);
@@ -1738,7 +1677,7 @@ void qSlicerHBVDSciVisPModuleWidget::setMRMLScene(vtkMRMLScene* varMRMLScene)
 
 
 
-		if (std::strcmp(cptrFileName, "drdModAxialCone_2.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
+		if (std::strcmp(cptrFileName, "example.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
 		{
 			actorFlyingEdge->GetProperty()->SetOpacity(0.0001);
 		}
@@ -2268,7 +2207,7 @@ vtkMRMLScalarVolumeNode* qSlicerHBVDSciVisPModuleWidget::loadVolume(const char* 
 		ptrVtkPiecewiseFuOpacities->AddPoint(374.12, 0.09);
 		ptrVtkPiecewiseFuOpacities->AddPoint(659.53, 0.53);
 	}
-	else if (std::strcmp(cptrFileName, "drdModAxialCone_2.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
+	else if (std::strcmp(cptrFileName, "example.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_2_mod.nrrd") == 0 || std::strcmp(cptrFileName, "drdModAxialCone_3.nrrd") == 0 || std::strcmp(cptrFileName, "cone_and_sphere.nrrd") == 0)
 	{
 		//For Cone and Sphere or Cone
 		ptrVtkPiecewiseFuOpacities->AddPoint(0.0, 0.0);
