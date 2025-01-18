@@ -15,14 +15,14 @@ We have created a compatible version of Chai3D 3.2.0 at https://github.com/lsrod
 
 # Debugging -- Note
   
-Slicer.exe --VisualStudio --launcher-no-splash --launcher-additional-settings C:\D\SE\SlicerHBVDinSciVisProd\build\AdditionalLauncherSettings.ini C:\D\SE\SlicerHBVDinSciVisProd\build\SlicerHBVDinSciVisProd.sln
+Slicer.exe --VisualStudio --launcher-no-splash --launcher-additional-settings <Build Folder>\AdditionalLauncherSettings.ini <Build Folder>\SlicerHBVDinSciVisProd.sln
   
 In Visual Studio -> Go To -> Solution -> ALL_BUILD -> Properties -> Configuration Properties -> Debugging -> Command
 Set the below:
-C:\D\S5D\Slicer-build\bin\Debug\SlicerApp-real.exe  
+<Slicer Folder>\Slicer-build\bin\Debug\SlicerApp-real.exe  
 
 In Slicer App -> Go To -> Edit -> Application Settings -> Modules -> Additional modulde paths -> Drag and Drop the folder as below :
-C:\D\SE\SlicerHBVDinSciVisProd\build\lib\Slicer-5.x\qt-loadable-modules\Debug
+<Build Folder>\lib\Slicer-5.x\qt-loadable-modules\Debug
   
 Slicer.exe --VisualStudio --launcher-no-splash  
 
@@ -38,7 +38,7 @@ Ensure the file MR-head.nrrd or any data for loading is present in the folder hi
 
 # VTK -- Note
 
-The file **C:\D\S5D\VTK\Common\DataModel\vtkImageData.cxx**  has code to get image data's scalar pointer.  This errors out if the coordinates are not in the bounds. \
+The file **<Slicer Folder>\VTK\Common\DataModel\vtkImageData.cxx**  has code to get image data's scalar pointer.  This errors out if the coordinates are not in the bounds. \
 This code is indirectly called when we try to get scalar value in the GUI loop.  In case you want to temporarely supress this. Comment the error code in the below function. \
 
 vtkImageData::GetScalarPointer(int coordinate[3])
