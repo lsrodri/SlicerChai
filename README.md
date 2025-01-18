@@ -6,6 +6,8 @@ This repository extends the initial code stemming from "Haptization of Biomedica
 
 This extension integrates Chai3D into 3DSlicer as a loadable module extension and provides a device-agnostic integration of haptics into 3D scenes. Haptic cursors are represented into 3D scenes, but voxel-based haptics are still under development. Limited interaction has been added.
 
+The extension has been tested with [Slicer 5.2.2](https://github.com/Slicer/Slicer/releases/tag/v5.2.2) and [Chai3D 3.2.0](https://github.com/lsrodri/chai3d-lite-slicer) on Windows 10.
+
 # Chai3D -- Note
 We have created a compatible version of Chai3D 3.2.0 at https://github.com/lsrodri/chai3d-lite-slicer. Your local clone of this repository should be used in your CMake build. 
 
