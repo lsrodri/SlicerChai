@@ -1,7 +1,5 @@
 # SlicerChai
 
-**This repository is still under development.**
-
 This repository extends the initial code stemming from "Haptization of Biomedical Volumetric Datasets in Scientific Visualization", a master's thesis authored by Darshain Desai and supervised by Lucas Siqueira Rodrigues at ZIB / Matters of Activity. 
 
 This extension integrates Chai3D into 3DSlicer as a loadable module extension and provides a device-agnostic integration of haptics into 3D scenes. Haptic cursors are represented into 3D scenes, but voxel-based haptics are still under development. Limited interaction has been added.
